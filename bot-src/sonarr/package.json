@@ -1,0 +1,31 @@
+{
+  "name": "telegram-sonarr-bot",
+  "version": "0.3.0",
+  "description": "A Telegram bot to interact with your Sonarr Web App",
+  "dependencies": {
+    "bluebird": "v3.0.6",
+    "fs-extra": "^0.26.4",
+    "i18n": "^0.5.0",
+    "lodash": "^4.0.0",
+    "moment": "^2.11.0",
+    "node-cache": "^3.0.0",
+    "node-telegram-bot-api": "^0.19.2",
+    "request": "^2.67.0",
+    "sonarr-api": "^0.1.2",
+    "winston": "^2.1.1"
+  },
+  "repository": "git://github.com/onedr0p/telegram-sonarr-bot",
+  "keywords": [
+    "sonarr",
+    "telegram"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "author": "Devin Buhl <devin.kray@gmail.com>",
+  "license": "MIT",
+    "scripts": {
+        "start": "node sonarr.js"
+    }
+
+}

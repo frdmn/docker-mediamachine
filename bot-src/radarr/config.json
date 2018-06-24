@@ -1,0 +1,25 @@
+{
+  "telegram": {
+    "botToken": ""
+  },
+  "bot": {
+    "password": "",
+    "owner": 0,
+    "notifyId": 0,
+    "maxResults": 15,
+    "lang": "en"
+  },
+  "sonarr": {
+    "hostname": "",
+    "apiKey": "",
+    "port": 8989,
+    "urlBase": "",
+    "ssl": false,
+    "username": "",
+    "password": ""
+  },
+  "defaults": {
+    "rootFolder": "/media/movies/",
+    "profileId": 4
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "radarr-telegram-bot",
+  "version": "0.1.0",
+  "description": "A Telegram bot to interact with your Radarr Web App",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "fs-extra": "^0.26.4",
+    "i18n": "^0.8.3",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "node-cache": "^3.0.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.87.0",
+    "sonarr-api": "^0.2.0",
+    "winston": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathan-owen/radarr-telegram-bot.git"
+  },
+  "keywords": [
+    "radarr",
+    "telegram"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "author": {
+    "name": "Nathan Owen",
+    "email": "nathan.owen@live.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node radarr.js"
+  },
+  "gitHead": "17f5d2f749080cbc01a1573b85bc9b6850f21d09",
+  "bugs": {
+    "url": "https://github.com/nathan-owen/radarr-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/nathan-owen/radarr-telegram-bot#readme",
+  "_id": "radarr-telegram-bot@0.1.0",
+  "_shasum": "c27a38140740a4f1646a0ce00eef584deb568e9d",
+  "_from": "radarr-telegram-bot@latest",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "6.10.3",
+  "_npmUser": {
+    "name": "nathanowen",
+    "email": "nathan.owen@live.com"
+  },
+  "dist": {
+    "shasum": "c27a38140740a4f1646a0ce00eef584deb568e9d",
+    "tarball": "https://registry.npmjs.org/radarr-telegram-bot/-/radarr-telegram-bot-0.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "nathanowen",
+      "email": "nathan.owen@live.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/radarr-telegram-bot-0.1.0.tgz_1498523043850_0.7947390286717564"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/radarr-telegram-bot/-/radarr-telegram-bot-0.1.0.tgz"
+}
