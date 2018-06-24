@@ -48,6 +48,8 @@ services:
     image: plexinc/pms-docker:${PLEX_IMAGEVERSION}
     network_mode: host
     environment:
+    - "PUID=${PLEX_PUID}"
+    - "PGID=${PLEX_PGID}"
     - "PLEX_CLAIM=${PLEX_CLAIM}"
     - "ADVERTISE_IP=${PLEX_ADVERTISE_IP}"
     - "TZ=${PLEX_TZ}"
