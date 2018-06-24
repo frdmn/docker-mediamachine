@@ -12,8 +12,6 @@ data/downloads/*
 !data/downloads/.gitkeep
 data/incomplete-downloads/*
 !data/incomplete-downloads/.gitkeep
-data/movies/*
-!data/movies/.gitkeep
-data/tv/*
-!data/tv/.gitkeep
+data/movies
+data/tv
 .env
