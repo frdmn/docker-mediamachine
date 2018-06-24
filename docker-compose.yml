@@ -49,6 +49,7 @@ services:
     network_mode: host
     environment:
     - "PLEX_CLAIM=${PLEX_CLAIM}"
+    - "ADVERTISE_IP=${PLEX_ADVERTISE_IP}"
     - "TZ=${PLEX_TZ}"
     volumes:
     - ./data/configs/plex/config:/config
