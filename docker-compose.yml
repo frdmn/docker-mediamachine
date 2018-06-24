@@ -43,6 +43,26 @@ services:
     - "PGID=${SABNZBD_PGID}"
     - "TZ=${SABNZBD_TZ}"
 
+  plex:
+    restart: always
+    image: linuxserver/plex:${PLEX_IMAGEVERSION}
+    ports:
+    - "32400:32400"
+    - "32400:32400/udp"
+    - "32469:32469"
+    - "32469:32469/udp"
+    - "5353:5353/udp"
+    - "1900:1900/udp"
+    volumes:
+    - ./data/configs/plex/config:/config
+    - ./data/configs/plex/transcoding:/transcode
+    - ./data/movies:/data/movies
+    - ./data/tv:/data/tvshows
+    environment:
+    - "PUID=${PLEX_PUID}"
+    - "PGID=${PLEX_PGID}"
+    - "TZ=${PLEX_TZ}"
+
   radarr-bot:
     restart: always
     build: ./bot-src/radarr

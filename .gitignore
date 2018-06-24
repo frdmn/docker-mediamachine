@@ -1,3 +1,7 @@
+data/configs/plex/config/*
+!data/configs/plex/config/.gitkeep
+data/configs/plex/transcoding/*
+!data/configs/plex/transcoding/.gitkeep
 data/configs/radarr/*
 !data/configs/radarr/.gitkeep
 data/configs/radarr-bot/*
