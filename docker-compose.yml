@@ -45,17 +45,15 @@ services:
 
   plex:
     restart: always
-    image: linuxserver/plex:${PLEX_IMAGEVERSION}
-    network_mode: "host"
+    image: plexinc/pms-docker:${PLEX_IMAGEVERSION}
+    network_mode: host
+    environment:
+    - "PLEX_CLAIM=${PLEX_CLAIM}"
+    - "TZ=${PLEX_TZ}"
     volumes:
     - ./data/configs/plex/config:/config
     - ./data/configs/plex/transcoding:/transcode
-    - ./data/media/movies:/data/movies
-    - ./data/media/tv:/data/tvshows
-    environment:
-    - "PUID=${PLEX_PUID}"
-    - "PGID=${PLEX_PGID}"
-    - "TZ=${PLEX_TZ}"
+    - ./data/media:/data
 
   radarr-bot:
     restart: always
