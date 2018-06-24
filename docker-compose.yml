@@ -8,7 +8,7 @@ services:
     - "${SONARR_PORT}:8989"
     volumes:
     - ./data/configs/sonarr:/config
-    - ./data/tv:/tv
+    - ./data/media/tv:/tv
     - ./data/downloads:/downloads
     environment:
     - "PUID=${SONARR_PUID}"
@@ -22,7 +22,7 @@ services:
     - "${RADARR_PORT}:7878"
     volumes:
     - ./data/configs/radarr:/config
-    - ./data/movies:/movies
+    - ./data/media/movies:/movies
     - ./data/downloads:/downloads
     environment:
     - "PUID=${RADARR_PUID}"
@@ -50,8 +50,8 @@ services:
     volumes:
     - ./data/configs/plex/config:/config
     - ./data/configs/plex/transcoding:/transcode
-    - ./data/movies:/data/movies
-    - ./data/tv:/data/tvshows
+    - ./data/media/movies:/data/movies
+    - ./data/media/tv:/data/tvshows
     environment:
     - "PUID=${PLEX_PUID}"
     - "PGID=${PLEX_PGID}"
