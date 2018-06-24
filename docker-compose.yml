@@ -1,0 +1,76 @@
+version: '2'
+
+services:
+  sonarr:
+    restart: always
+    image: linuxserver/sonarr:${SONARR_IMAGEVERSION}
+    ports:
+    - "${SONARR_IMAGEVERSION}:8989"
+    volumes:
+    - ./data/configs/sonarr:/config
+    - ./data/tv:/tv
+    - ./data/downloads:/downloads
+    environment:
+    - "PUID=${SONARR_PUID}"
+    - "PGID=${SONARR_PGID}"
+    - "TZ=${SONARR_TZ}"
+
+  radarr:
+    restart: always
+    image: linuxserver/radarr:${RADARR_IMAGEVERSION}
+    ports:
+    - "${RADARR_PORT}:7878"
+    volumes:
+    - ./data/configs/radarr:/config
+    - ./data/movies:/movies
+    - ./data/downloads:/downloads
+    environment:
+    - "PUID=${RADARR_PUID}"
+    - "PGID=${RADARR_PGID}"
+    - "TZ=${RADARR_TZ}"
+
+  sabnzbd:
+    restart: always
+    image: linuxserver/sabnzbd:${SABNZBD_IMAGEVERSION}
+    ports:
+    - "${SABNZBD_PORT}:8080"
+    volumes:
+    - ./data/configs/sabnzbd:/config
+    - ./data/downloads:/downloads
+    - ./data/incomplete-downloads:/incomplete-downloads
+    environment:
+    - "PUID=${SABNZBD_PUID}"
+    - "PGID=${SABNZBD_PGID}"
+    - "TZ=${SABNZBD_TZ}"
+
+  radarr-bot:
+    restart: always
+    build: ./bot-src/radarr
+    volumes:
+    - ./data/configs/radarr-bot/acl.json:/app/acl.json
+    environment:
+    - "TELEGRAM_BOTTOKEN=${RADARR_BOT_TELEGRAM_BOTTOKEN}"
+    - "BOT_PASSWORD=${RADARR_BOT_BOT_PASSWORD}"
+    - "BOT_OWNER=${RADARR_BOT_BOT_OWNER}"
+    - "BOT_NOTIFYID=${RADARR_BOT_BOT_NOTIFYID}"
+    - "BOT_MAXRESULTS=${RADARR_BOT_BOT_MAXRESULTS}"
+    - "RADARR_HOST=${RADARR_BOT_RADARR_HOST}"
+    - "RADARR_APIKEY=${RADARR_BOT_RADARR_APIKEY}"
+    - "RADARR_PORT=${RADARR_BOT_RADARR_PORT}"
+    - "DEFAULTS_ROOTFOLDER=${RADARR_BOT_DEFAULTS_ROOTFOLDER}"
+    - "DEFAULTS_PROFILEID=${RADARR_BOT_DEFAULTS_PROFILEID}"
+
+  sonarr-bot:
+    restart: always
+    build: ./bot-src/sonarr
+    volumes:
+    - ./data/configs/sonarr-bot/acl.json:/app/acl.json
+    environment:
+    - "TELEGRAM_BOTTOKEN=${SONARR_BOT_TELEGRAM_BOTTOKEN}"
+    - "BOT_PASSWORD=${SONARR_BOT_BOT_PASSWORD}"
+    - "BOT_OWNER=${SONARR_BOT_BOT_OWNER}"
+    - "BOT_NOTIFYID=${SONARR_BOT_BOT_NOTIFYID}"
+    - "BOT_MAXRESULTS=${SONARR_BOT_BOT_MAXRESULTS}"
+    - "SONARR_HOST=${SONARR_BOT_SONARR_HOST}"
+    - "SONARR_APIKEY=${SONARR_BOT_SONARR_APIKEY}"
+    - "SONARR_PORT=${SONARR_BOT_SONARR_PORT}"
