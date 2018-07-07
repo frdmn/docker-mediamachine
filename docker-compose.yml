@@ -60,7 +60,7 @@ services:
 
   radarr-bot:
     restart: always
-    build: ./bot-src/radarr
+    build: ./docker/radarr-bot
     volumes:
     - ./data/configs/radarr-bot/acl.json:/app/acl.json
     environment:
@@ -77,7 +77,7 @@ services:
 
   sonarr-bot:
     restart: always
-    build: ./bot-src/sonarr
+    build: ./docker/sonarr-bot
     volumes:
     - ./data/configs/sonarr-bot/acl.json:/app/acl.json
     environment:
