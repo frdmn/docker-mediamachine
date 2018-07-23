@@ -1,6 +1,6 @@
 # docker-mediamachine
 
-My dockerized NAS / Mediamachine consisting of SabNZBd, Sonarr, Radarr, Plex as well as Telegram Bots to control the services. 
+My dockerized NAS / Mediamachine consisting of SabNZBd, Sonarr, Radarr, Plex, Ombi as well as Telegram Bots to control the services. 
 
 ## Installation
 
@@ -72,6 +72,14 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------| 
+| `OMBI_IMAGEVERSION` | `106` | Image version of Ombi container  |
+| `OMBI_PORT` | `3579` | Port to bind Ombi on the host system |
+| `OMBI_PUID` | `501` | UID of Ombi user (should be match with the host one) |
+| `OMBI_PGID` | `501` | GID of Ombi user (should be match with the host one) |
+| `OMBI_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------| 
 | `RADARR_BOT_TELEGRAM_BOTTOKEN` | `123456789:HEkD9NpcxbKVxiulzPfCf9fqQoViMKEWZHl` | Telegram token |
 | `RADARR_BOT_BOT_PASSWORD` | `password` | Bot control password |
 | `RADARR_BOT_BOT_OWNER` | `1234567` | Telegram owner ID |
@@ -102,6 +110,7 @@ You can make use of the following environment variables / configurations:
 
 ```shell
 $ docker-compose up -d
+Creating media_ombi_1       ... done
 Creating media_plex_1       ... done
 Creating media_radarr-bot_1 ... done
 Creating media_radarr_1     ... done
@@ -114,6 +123,7 @@ Creating media_sonarr_1     ... done
 
 ```shell
 $ docker-compose stop
+Stopping media_ombi_1       ... done
 Stopping media_plex_1       ... done
 Stopping media_radarr-bot_1 ... done
 Stopping media_radarr_1     ... done

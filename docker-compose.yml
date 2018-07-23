@@ -58,6 +58,19 @@ services:
     - ./data/configs/plex/transcoding:/transcode
     - ./data/media:/data
 
+  ombi:
+    restart: always
+    image: linuxserver/ombi:${OMBI_IMAGEVERSION}
+    ports:
+    - "${OMBI_PORT}:3579"
+    environment:
+    - "PGID=${OMBI_PUID}"
+    - "PUID=${OMBI_PGID}"
+    - "TZ=${OMBI_TZ}"
+    volumes:
+    - ./data/configs/ombi/config:/config
+    - ./data/configs/plex/config/Library/Application\ Support/Plex\ Media\ Server/Logs:/logs
+
   radarr-bot:
     restart: always
     build: ./docker/radarr-bot

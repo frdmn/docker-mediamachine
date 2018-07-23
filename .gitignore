@@ -1,3 +1,5 @@
+data/configs/ombi/*
+!data/configs/ombi/.gitkeep
 data/configs/plex/config/*
 !data/configs/plex/config/.gitkeep
 data/configs/plex/transcoding/*
