@@ -105,7 +105,7 @@ services:
 
   muximux:
     restart: always
-    image: lsiocommunity/muximux:${MUXIMUX_IMAGEVERSION}
+    image: linuxserver/muximux:${MUXIMUX_IMAGEVERSION}
     ports:
     - "${MUXIMUX_PORT}:80"
     environment:
