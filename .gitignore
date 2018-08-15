@@ -14,6 +14,8 @@ data/configs/sonarr/*
 !data/configs/sonarr/.gitkeep
 data/configs/sonarr-bot/*
 !data/configs/sonarr-bot/.gitkeep
+data/configs/muximux/*
+!data/configs/muximux/.gitkeep
 data/downloads/*
 !data/downloads/.gitkeep
 data/incomplete-downloads/*
