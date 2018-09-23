@@ -1,6 +1,6 @@
 # docker-mediamachine
 
-My dockerized NAS / Mediamachine consisting of SabNZBd, Sonarr, Radarr, Plex, Ombi as well as Telegram Bots to control the services. 
+My dockerized NAS / Mediamachine consisting of SabNZBd, Sonarr, Radarr, Plex, Ombi as well as Telegram Bots to control the services.
 
 ## Installation
 
@@ -38,7 +38,7 @@ docker-compose up -d
 You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
 | `SONARR_IMAGEVERSION` | `142` | Image version of Sonarr container |
 | `SONARR_PORT` | `8989` | Port to bind Sonarr on the host system |
 | `SONARR_PUID` | `501` | UID of Sonarr user (should be match with the host one) |
@@ -46,7 +46,7 @@ You can make use of the following environment variables / configurations:
 | `SONARR_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
 | `RADARR_IMAGEVERSION` | `117` | Image version of Radarr container |
 | `RADARR_PORT` | `7878` | Port to bind Radarr on the host system |
 | `RADARR_PUID` | `501` | UID of Radarr user (should be match with the host one) |
@@ -54,7 +54,7 @@ You can make use of the following environment variables / configurations:
 | `RADARR_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
 | `SABNZBD_IMAGEVERSION` | `121` | Image version of SabNZBd container  |
 | `SABNZBD_PORT` | `8080` | Port to bind SabNZBd on the host system |
 | `SABNZBD_PUID` | `501` | UID of SabNZBd user (should be match with the host one) |
@@ -62,7 +62,7 @@ You can make use of the following environment variables / configurations:
 | `SABNZBD_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
 | `PLEX_IMAGEVERSION` | `1.13.2.5154-fd05be322` | Image version of Plex container |
 | `PLEX_CLAIM` | `XXX` | Plex claim code (https://www.plex.tv/claim/) |
 | `PLEX_PUID` | `501` | UID of Plex user (should be match with the host one) |
@@ -71,7 +71,7 @@ You can make use of the following environment variables / configurations:
 | `PLEX_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
 | `OMBI_IMAGEVERSION` | `106` | Image version of Ombi container  |
 | `OMBI_PORT` | `3579` | Port to bind Ombi on the host system |
 | `OMBI_PUID` | `501` | UID of Ombi user (should be match with the host one) |
@@ -79,7 +79,15 @@ You can make use of the following environment variables / configurations:
 | `OMBI_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
+| `PYLOAD_IMAGEVERSION` | `latest` | Image version of PyLoad container  |
+| `PYLOAD_PORT` | `8000` | Port to bind PyLoad on the host system |
+| `PYLOAD_PUID` | `501` | UID of PyLoad user (should be match with the host one) |
+| `PYLOAD_PGID` | `501` | GID of PyLoad user (should be match with the host one) |
+| `PYLOAD_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
 | `RADARR_BOT_TELEGRAM_BOTTOKEN` | `123456789:HEkD9NpcxbKVxiulzPfCf9fqQoViMKEWZHl` | Telegram token |
 | `RADARR_BOT_BOT_PASSWORD` | `password` | Bot control password |
 | `RADARR_BOT_BOT_OWNER` | `1234567` | Telegram owner ID |
@@ -92,7 +100,7 @@ You can make use of the following environment variables / configurations:
 | `RADARR_BOT_DEFAULTS_PROFILEID` | `4` | Default profile ID when adding new movies |
 
 | Environment variable | Default value | Description
-|----------------------|---------------|------------| 
+|----------------------|---------------|------------|
 | `SONARR_BOT_TELEGRAM_BOTTOKEN` | `123456789:hXgD8033Z5lUfSnnmyJxUp71gVJ1yrLFSOG` | Telegram token |
 | `SONARR_BOT_BOT_PASSWORD` | `password` | Bot control password |
 | `SONARR_BOT_BOT_OWNER` | `1234567` | Telegram owner ID |
@@ -101,6 +109,15 @@ You can make use of the following environment variables / configurations:
 | `SONARR_BOT_SONARR_HOST` | `nas.host.name.com` | Sonarr hostname|
 | `SONARR_BOT_SONARR_APIKEY` | `ubNIceVUT6J1qgpyrwdrvluruGm0hmaP` | Sonarr API key |
 | `SONARR_BOT_SONARR_PORT` | `8989` | Sonarr port |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
+| `MUXIMUX_IMAGEVERSION` | `105` | Image version of Muximux container  |
+| `MUXIMUX_PORT` | `80` | Port to bind Muximux on the host system |
+| `MUXIMUX_PUID` | `501` | UID of Muximux user (should be match with the host one) |
+| `MUXIMUX_PGID` | `501` | GID of Muximux user (should be match with the host one) |
+| `MUXIMUX_TZ` | `Europe/Berlin` | Timezone within container |
+
 
 ## Usage
 
