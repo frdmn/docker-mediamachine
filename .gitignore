@@ -12,6 +12,8 @@ data/configs/sabnzbd/*
 !data/configs/sabnzbd/.gitkeep
 data/configs/sonarr/*
 !data/configs/sonarr/.gitkeep
+data/configs/pyload/*
+!data/configs/pyload/.gitkeep
 data/configs/sonarr-bot/*
 !data/configs/sonarr-bot/.gitkeep
 data/configs/muximux/*
