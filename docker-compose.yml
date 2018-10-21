@@ -70,6 +70,17 @@ services:
     - ./data/media/movies:/movies
     - ./data/media/tv:/tv
 
+  oscarr:
+    restart: always
+    image: morpheus65535/oscarr:${OSCARR_IMAGEVERSION}
+    ports:
+    - "${OSCARR_PORT}:80"
+    environment:
+    - "PUID=${OSCARR_PUID}"
+    - "PGID=${OSCARR_PGID}"
+    - "TZ=${OSCARR_TZ}"
+    volumes:
+    - ./data/configs/oscarr/config:/oscarr/data
   muximux:
     restart: always
     image: linuxserver/muximux:${MUXIMUX_IMAGEVERSION}

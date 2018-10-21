@@ -79,6 +79,14 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
+| `OSCARR_IMAGEVERSION` | `latest` | Image version of Oscarr container  |
+| `OSCARR_PORT` | `5656` | Port to bind Oscarr on the host system |
+| `OSCARR_PUID` | `501` | UID of Oscarr user (should be match with the host one) |
+| `OSCARR_PGID` | `501` | GID of Oscarr user (should be match with the host one) |
+| `OSCARR_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
 | `MUXIMUX_IMAGEVERSION` | `139` | Image version of Muximux container  |
 | `MUXIMUX_PORT` | `80` | Port to bind Muximux on the host system |
 | `MUXIMUX_PUID` | `501` | UID of Muximux user (should be match with the host one) |
