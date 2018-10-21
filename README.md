@@ -63,20 +63,28 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
+| `OMBI_IMAGEVERSION` | `125` | Image version of Ombi container  |
+| `OMBI_PORT` | `3579` | Port to bind Ombi on the host system |
+| `OMBI_PUID` | `501` | UID of Ombi user (should be match with the host one) |
+| `OMBI_PGID` | `501` | GID of Ombi user (should be match with the host one) |
+| `OMBI_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
+| `MUXIMUX_IMAGEVERSION` | `139` | Image version of Muximux container  |
+| `MUXIMUX_PORT` | `80` | Port to bind Muximux on the host system |
+| `MUXIMUX_PUID` | `501` | UID of Muximux user (should be match with the host one) |
+| `MUXIMUX_PGID` | `501` | GID of Muximux user (should be match with the host one) |
+| `MUXIMUX_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
 | `PLEX_IMAGEVERSION` | `1.13.8.5395-10d48da0d` | Image version of Plex container |
 | `PLEX_CLAIM` | `XXX` | Plex claim code (https://www.plex.tv/claim/) |
 | `PLEX_PUID` | `501` | UID of Plex user (should be match with the host one) |
 | `PLEX_PGID` | `501` | GID of Plex user (should be match with the host one) |
 | `PLEX_ADVERTISE_IP` | `127.0.0.1` | Advertise IP for Plex |
 | `PLEX_TZ` | `Europe/Berlin` | Timezone within container |
-
-| Environment variable | Default value | Description
-|----------------------|---------------|------------|
-| `OMBI_IMAGEVERSION` | `125` | Image version of Ombi container  |
-| `OMBI_PORT` | `3579` | Port to bind Ombi on the host system |
-| `OMBI_PUID` | `501` | UID of Ombi user (should be match with the host one) |
-| `OMBI_PGID` | `501` | GID of Ombi user (should be match with the host one) |
-| `OMBI_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
@@ -101,15 +109,6 @@ You can make use of the following environment variables / configurations:
 | `SONARR_BOT_SONARR_HOST` | `nas.host.name.com` | Sonarr hostname|
 | `SONARR_BOT_SONARR_APIKEY` | `ubNIceVUT6J1qgpyrwdrvluruGm0hmaP` | Sonarr API key |
 | `SONARR_BOT_SONARR_PORT` | `8989` | Sonarr port |
-
-| Environment variable | Default value | Description
-|----------------------|---------------|------------|
-| `MUXIMUX_IMAGEVERSION` | `139` | Image version of Muximux container  |
-| `MUXIMUX_PORT` | `80` | Port to bind Muximux on the host system |
-| `MUXIMUX_PUID` | `501` | UID of Muximux user (should be match with the host one) |
-| `MUXIMUX_PGID` | `501` | GID of Muximux user (should be match with the host one) |
-| `MUXIMUX_TZ` | `Europe/Berlin` | Timezone within container |
-
 
 ## Usage
 
