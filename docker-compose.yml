@@ -56,6 +56,20 @@ services:
     - ./data/configs/ombi/config:/config
     - ./data/configs/plex/config/Library/Application\ Support/Plex\ Media\ Server/Logs:/logs
 
+  bazarr:
+    restart: always
+    image: linuxserver/bazarr:${BAZARR_IMAGEVERSION}
+    ports:
+    - "${BAZARR_PORT}:6767"
+    environment:
+    - "PUID=${BAZARR_PUID}"
+    - "PGID=${BAZARR_PGID}"
+    - "TZ=${BAZARR_TZ}"
+    volumes:
+    - ./data/configs/bazarr/config:/config
+    - ./data/media/movies:/movies
+    - ./data/media/tv:/tv
+
   muximux:
     restart: always
     image: linuxserver/muximux:${MUXIMUX_IMAGEVERSION}
