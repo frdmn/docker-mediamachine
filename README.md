@@ -1,6 +1,6 @@
 # docker-mediamachine
 
-My dockerized NAS / Mediamachine consisting of SabNZBd, Sonarr, Radarr, Plex, Ombi as well as Telegram Bots to control the services.
+My dockerized NAS / Mediamachine consisting of SabNZBd, Sonarr, Radarr, Plex, Ombi, Bazarr as well as Telegram Bots to control the services.
 
 ## Installation
 
@@ -68,6 +68,14 @@ You can make use of the following environment variables / configurations:
 | `OMBI_PUID` | `501` | UID of Ombi user (should be match with the host one) |
 | `OMBI_PGID` | `501` | GID of Ombi user (should be match with the host one) |
 | `OMBI_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
+| `BAZARR_IMAGEVERSION` | `amd64-v0.6.6.3-ls7` | Image version of Bazarr container  |
+| `BAZARR_PORT` | `6767` | Port to bind Bazarr on the host system |
+| `BAZARR_PUID` | `501` | UID of Bazarr user (should be match with the host one) |
+| `BAZARR_PGID` | `501` | GID of Bazarr user (should be match with the host one) |
+| `BAZARR_TZ` | `Europe/Berlin` | Timezone within container |
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
