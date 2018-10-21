@@ -74,7 +74,7 @@ services:
     restart: always
     image: morpheus65535/oscarr:${OSCARR_IMAGEVERSION}
     ports:
-    - "${OSCARR_PORT}:80"
+    - "${OSCARR_PORT}:5656"
     environment:
     - "PUID=${OSCARR_PUID}"
     - "PGID=${OSCARR_PGID}"
