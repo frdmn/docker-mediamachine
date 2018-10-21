@@ -71,19 +71,6 @@ services:
     - ./data/configs/ombi/config:/config
     - ./data/configs/plex/config/Library/Application\ Support/Plex\ Media\ Server/Logs:/logs
 
-  pyload:
-    restart: always
-    image: writl/pyload:${PYLOAD_IMAGEVERSION}
-    ports:
-    - "${PYLOAD_PORT}:8000"
-    environment:
-    - "GID=${PYLOAD_PUID}"
-    - "UID=${PYLOAD_PGID}"
-    - "TZ=${PYLOAD_TZ}"
-    volumes:
-    - ./data/configs/pyload/config:/opt/pyload/pyload-config
-    - ./data/downloads:/opt/pyload/Downloads
-
   radarr-bot:
     restart: always
     build: ./docker/radarr-bot

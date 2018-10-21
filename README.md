@@ -80,14 +80,6 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `PYLOAD_IMAGEVERSION` | `latest` | Image version of PyLoad container  |
-| `PYLOAD_PORT` | `8000` | Port to bind PyLoad on the host system |
-| `PYLOAD_PUID` | `501` | UID of PyLoad user (should be match with the host one) |
-| `PYLOAD_PGID` | `501` | GID of PyLoad user (should be match with the host one) |
-| `PYLOAD_TZ` | `Europe/Berlin` | Timezone within container |
-
-| Environment variable | Default value | Description
-|----------------------|---------------|------------|
 | `RADARR_BOT_TELEGRAM_BOTTOKEN` | `123456789:HEkD9NpcxbKVxiulzPfCf9fqQoViMKEWZHl` | Telegram token |
 | `RADARR_BOT_BOT_PASSWORD` | `password` | Bot control password |
 | `RADARR_BOT_BOT_OWNER` | `1234567` | Telegram owner ID |
