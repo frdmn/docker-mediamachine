@@ -5,137 +5,137 @@ services:
     restart: always
     image: linuxserver/sonarr:${SONARR_IMAGEVERSION}
     ports:
-    - "${SONARR_PORT}:8989"
+      - "${SONARR_PORT}:8989"
     volumes:
-    - ./data/configs/sonarr:/config
-    - ./data/media/tv:/tv
-    - ./data/downloads:/downloads
+      - ./data/configs/sonarr:/config
+      - ./data/media/tv:/tv
+      - ./data/downloads:/downloads
     environment:
-    - "PUID=${SONARR_PUID}"
-    - "PGID=${SONARR_PGID}"
-    - "TZ=${SONARR_TZ}"
+      - "PUID=${SONARR_PUID}"
+      - "PGID=${SONARR_PGID}"
+      - "TZ=${SONARR_TZ}"
 
   radarr:
     restart: always
     image: linuxserver/radarr:${RADARR_IMAGEVERSION}
     ports:
-    - "${RADARR_PORT}:7878"
+      - "${RADARR_PORT}:7878"
     volumes:
-    - ./data/configs/radarr:/config
-    - ./data/media/movies:/movies
-    - ./data/downloads:/downloads
+      - ./data/configs/radarr:/config
+      - ./data/media/movies:/movies
+      - ./data/downloads:/downloads
     environment:
-    - "PUID=${RADARR_PUID}"
-    - "PGID=${RADARR_PGID}"
-    - "TZ=${RADARR_TZ}"
+      - "PUID=${RADARR_PUID}"
+      - "PGID=${RADARR_PGID}"
+      - "TZ=${RADARR_TZ}"
 
   sabnzbd:
     restart: always
     image: linuxserver/sabnzbd:${SABNZBD_IMAGEVERSION}
     ports:
-    - "${SABNZBD_PORT}:8080"
+      - "${SABNZBD_PORT}:8080"
     volumes:
-    - ./data/configs/sabnzbd:/config
-    - ./data/downloads:/downloads
-    - ./data/incomplete-downloads:/incomplete-downloads
+      - ./data/configs/sabnzbd:/config
+      - ./data/downloads:/downloads
+      - ./data/incomplete-downloads:/incomplete-downloads
     environment:
-    - "PUID=${SABNZBD_PUID}"
-    - "PGID=${SABNZBD_PGID}"
-    - "TZ=${SABNZBD_TZ}"
+      - "PUID=${SABNZBD_PUID}"
+      - "PGID=${SABNZBD_PGID}"
+      - "TZ=${SABNZBD_TZ}"
 
   ombi:
     restart: always
     image: linuxserver/ombi:${OMBI_IMAGEVERSION}
     ports:
-    - "${OMBI_PORT}:3579"
+      - "${OMBI_PORT}:3579"
     environment:
-    - "PGID=${OMBI_PUID}"
-    - "PUID=${OMBI_PGID}"
-    - "TZ=${OMBI_TZ}"
+      - "PGID=${OMBI_PUID}"
+      - "PUID=${OMBI_PGID}"
+      - "TZ=${OMBI_TZ}"
     volumes:
-    - ./data/configs/ombi/config:/config
-    - ./data/configs/plex/config/Library/Application\ Support/Plex\ Media\ Server/Logs:/logs
+      - ./data/configs/ombi/config:/config
+      - ./data/configs/plex/config/Library/Application\ Support/Plex\ Media\ Server/Logs:/logs
 
   bazarr:
     restart: always
     image: linuxserver/bazarr:${BAZARR_IMAGEVERSION}
     ports:
-    - "${BAZARR_PORT}:6767"
+      - "${BAZARR_PORT}:6767"
     environment:
-    - "PUID=${BAZARR_PUID}"
-    - "PGID=${BAZARR_PGID}"
-    - "TZ=${BAZARR_TZ}"
+      - "PUID=${BAZARR_PUID}"
+      - "PGID=${BAZARR_PGID}"
+      - "TZ=${BAZARR_TZ}"
     volumes:
-    - ./data/configs/bazarr/config:/config
-    - ./data/media/movies:/movies
-    - ./data/media/tv:/tv
+      - ./data/configs/bazarr/config:/config
+      - ./data/media/movies:/movies
+      - ./data/media/tv:/tv
 
   oscarr:
     restart: always
     image: morpheus65535/oscarr:${OSCARR_IMAGEVERSION}
     ports:
-    - "${OSCARR_PORT}:5656"
+      - "${OSCARR_PORT}:5656"
     environment:
-    - "PUID=${OSCARR_PUID}"
-    - "PGID=${OSCARR_PGID}"
-    - "TZ=${OSCARR_TZ}"
+      - "PUID=${OSCARR_PUID}"
+      - "PGID=${OSCARR_PGID}"
+      - "TZ=${OSCARR_TZ}"
     volumes:
-    - ./data/configs/oscarr/config:/oscarr/data
+      - ./data/configs/oscarr/config:/oscarr/data
   muximux:
     restart: always
     image: linuxserver/muximux:${MUXIMUX_IMAGEVERSION}
     ports:
-    - "${MUXIMUX_PORT}:80"
+      - "${MUXIMUX_PORT}:80"
     environment:
-    - "PUID=${MUXIMUX_PUID}"
-    - "PGID=${MUXIMUX_PGID}"
-    - "TZ=${MUXIMUX_TZ}"
+      - "PUID=${MUXIMUX_PUID}"
+      - "PGID=${MUXIMUX_PGID}"
+      - "TZ=${MUXIMUX_TZ}"
     volumes:
-    - ./data/configs/muximux/config:/config
+      - ./data/configs/muximux/config:/config
 
   plex:
     restart: always
     image: plexinc/pms-docker:${PLEX_IMAGEVERSION}
     network_mode: host
     environment:
-    - "PLEX_UID=${PLEX_PUID}"
-    - "PLEX_GID=${PLEX_PGID}"
-    - "PLEX_CLAIM=${PLEX_CLAIM}"
-    - "ADVERTISE_IP=${PLEX_ADVERTISE_IP}"
-    - "TZ=${PLEX_TZ}"
+      - "PLEX_UID=${PLEX_PUID}"
+      - "PLEX_GID=${PLEX_PGID}"
+      - "PLEX_CLAIM=${PLEX_CLAIM}"
+      - "ADVERTISE_IP=${PLEX_ADVERTISE_IP}"
+      - "TZ=${PLEX_TZ}"
     volumes:
-    - ./data/configs/plex/config:/config
-    - ./data/configs/plex/transcoding:/transcode
-    - ./data/media:/data
+      - ./data/configs/plex/config:/config
+      - ./data/configs/plex/transcoding:/transcode
+      - ./data/media:/data
 
   radarr-bot:
     restart: always
     build: ./docker/radarr-bot
     volumes:
-    - ./data/configs/radarr-bot/acl.json:/app/acl.json
+      - ./data/configs/radarr-bot/acl.json:/app/acl.json
     environment:
-    - "TELEGRAM_BOTTOKEN=${RADARR_BOT_TELEGRAM_BOTTOKEN}"
-    - "BOT_PASSWORD=${RADARR_BOT_BOT_PASSWORD}"
-    - "BOT_OWNER=${RADARR_BOT_BOT_OWNER}"
-    - "BOT_NOTIFYID=${RADARR_BOT_BOT_NOTIFYID}"
-    - "BOT_MAXRESULTS=${RADARR_BOT_BOT_MAXRESULTS}"
-    - "RADARR_HOST=${RADARR_BOT_RADARR_HOST}"
-    - "RADARR_APIKEY=${RADARR_BOT_RADARR_APIKEY}"
-    - "RADARR_PORT=${RADARR_BOT_RADARR_PORT}"
-    - "DEFAULTS_ROOTFOLDER=${RADARR_BOT_DEFAULTS_ROOTFOLDER}"
-    - "DEFAULTS_PROFILEID=${RADARR_BOT_DEFAULTS_PROFILEID}"
+      - "TELEGRAM_BOTTOKEN=${RADARR_BOT_TELEGRAM_BOTTOKEN}"
+      - "BOT_PASSWORD=${RADARR_BOT_BOT_PASSWORD}"
+      - "BOT_OWNER=${RADARR_BOT_BOT_OWNER}"
+      - "BOT_NOTIFYID=${RADARR_BOT_BOT_NOTIFYID}"
+      - "BOT_MAXRESULTS=${RADARR_BOT_BOT_MAXRESULTS}"
+      - "RADARR_HOST=${RADARR_BOT_RADARR_HOST}"
+      - "RADARR_APIKEY=${RADARR_BOT_RADARR_APIKEY}"
+      - "RADARR_PORT=${RADARR_BOT_RADARR_PORT}"
+      - "DEFAULTS_ROOTFOLDER=${RADARR_BOT_DEFAULTS_ROOTFOLDER}"
+      - "DEFAULTS_PROFILEID=${RADARR_BOT_DEFAULTS_PROFILEID}"
 
   sonarr-bot:
     restart: always
     build: ./docker/sonarr-bot
     volumes:
-    - ./data/configs/sonarr-bot/acl.json:/app/acl.json
+      - ./data/configs/sonarr-bot/acl.json:/app/acl.json
     environment:
-    - "TELEGRAM_BOTTOKEN=${SONARR_BOT_TELEGRAM_BOTTOKEN}"
-    - "BOT_PASSWORD=${SONARR_BOT_BOT_PASSWORD}"
-    - "BOT_OWNER=${SONARR_BOT_BOT_OWNER}"
-    - "BOT_NOTIFYID=${SONARR_BOT_BOT_NOTIFYID}"
-    - "BOT_MAXRESULTS=${SONARR_BOT_BOT_MAXRESULTS}"
-    - "SONARR_HOST=${SONARR_BOT_SONARR_HOST}"
-    - "SONARR_APIKEY=${SONARR_BOT_SONARR_APIKEY}"
-    - "SONARR_PORT=${SONARR_BOT_SONARR_PORT}"
+      - "TELEGRAM_BOTTOKEN=${SONARR_BOT_TELEGRAM_BOTTOKEN}"
+      - "BOT_PASSWORD=${SONARR_BOT_BOT_PASSWORD}"
+      - "BOT_OWNER=${SONARR_BOT_BOT_OWNER}"
+      - "BOT_NOTIFYID=${SONARR_BOT_BOT_NOTIFYID}"
+      - "BOT_MAXRESULTS=${SONARR_BOT_BOT_MAXRESULTS}"
+      - "SONARR_HOST=${SONARR_BOT_SONARR_HOST}"
+      - "SONARR_APIKEY=${SONARR_BOT_SONARR_APIKEY}"
+      - "SONARR_PORT=${SONARR_BOT_SONARR_PORT}"
