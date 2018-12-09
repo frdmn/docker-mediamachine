@@ -3,6 +3,7 @@ version: "3"
 services:
   sonarr:
     restart: always
+    container_name: sonarr
     image: linuxserver/sonarr:${SONARR_IMAGEVERSION}
     ports:
       - "${SONARR_PORT}:8989"
@@ -17,6 +18,7 @@ services:
 
   radarr:
     restart: always
+    container_name: radarr
     image: linuxserver/radarr:${RADARR_IMAGEVERSION}
     ports:
       - "${RADARR_PORT}:7878"
@@ -31,6 +33,7 @@ services:
 
   sabnzbd:
     restart: always
+    container_name: sabnzbd
     image: linuxserver/sabnzbd:${SABNZBD_IMAGEVERSION}
     ports:
       - "${SABNZBD_PORT}:8080"
@@ -45,6 +48,7 @@ services:
 
   ombi:
     restart: always
+    container_name: ombi
     image: linuxserver/ombi:${OMBI_IMAGEVERSION}
     ports:
       - "${OMBI_PORT}:3579"
@@ -58,6 +62,7 @@ services:
 
   bazarr:
     restart: always
+    container_name: bazarr
     image: linuxserver/bazarr:${BAZARR_IMAGEVERSION}
     ports:
       - "${BAZARR_PORT}:6767"
@@ -72,6 +77,7 @@ services:
 
   oscarr:
     restart: always
+    container_name: oscarr
     image: morpheus65535/oscarr:${OSCARR_IMAGEVERSION}
     ports:
       - "${OSCARR_PORT}:5656"
@@ -95,6 +101,7 @@ services:
 
   plex:
     restart: always
+    container_name: plex
     image: plexinc/pms-docker:${PLEX_IMAGEVERSION}
     network_mode: host
     environment:
@@ -110,6 +117,7 @@ services:
 
   radarr-bot:
     restart: always
+    container_name: radarr-bot
     build: ./docker/radarr-bot
     volumes:
       - ./data/configs/radarr-bot/acl.json:/app/acl.json
@@ -127,6 +135,7 @@ services:
 
   sonarr-bot:
     restart: always
+    container_name: sonarr-bot
     build: ./docker/sonarr-bot
     volumes:
       - ./data/configs/sonarr-bot/acl.json:/app/acl.json
