@@ -87,8 +87,10 @@ services:
       - "TZ=${OSCARR_TZ}"
     volumes:
       - ./data/configs/oscarr/config:/oscarr/data
+
   muximux:
     restart: always
+    container_name: muximux
     image: linuxserver/muximux:${MUXIMUX_IMAGEVERSION}
     ports:
       - "${MUXIMUX_PORT}:80"
