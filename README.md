@@ -39,7 +39,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `SONARR_IMAGEVERSION` | `160` | Image version of Sonarr container |
+| `SONARR_IMAGEVERSION` | `170` | Image version of Sonarr container |
 | `SONARR_PORT` | `8989` | Port to bind Sonarr on the host system |
 | `SONARR_PUID` | `501` | UID of Sonarr user (should be match with the host one) |
 | `SONARR_PGID` | `501` | GID of Sonarr user (should be match with the host one) |
@@ -47,7 +47,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `RADARR_IMAGEVERSION` | `135` | Image version of Radarr container |
+| `RADARR_IMAGEVERSION` | `146` | Image version of Radarr container |
 | `RADARR_PORT` | `7878` | Port to bind Radarr on the host system |
 | `RADARR_PUID` | `501` | UID of Radarr user (should be match with the host one) |
 | `RADARR_PGID` | `501` | GID of Radarr user (should be match with the host one) |
@@ -55,7 +55,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `SABNZBD_IMAGEVERSION` | `138` | Image version of SabNZBd container  |
+| `SABNZBD_IMAGEVERSION` | `148` | Image version of SabNZBd container  |
 | `SABNZBD_PORT` | `8080` | Port to bind SabNZBd on the host system |
 | `SABNZBD_PUID` | `501` | UID of SabNZBd user (should be match with the host one) |
 | `SABNZBD_PGID` | `501` | GID of SabNZBd user (should be match with the host one) |
@@ -63,7 +63,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `OMBI_IMAGEVERSION` | `125` | Image version of Ombi container  |
+| `OMBI_IMAGEVERSION` | `137` | Image version of Ombi container  |
 | `OMBI_PORT` | `3579` | Port to bind Ombi on the host system |
 | `OMBI_PUID` | `501` | UID of Ombi user (should be match with the host one) |
 | `OMBI_PGID` | `501` | GID of Ombi user (should be match with the host one) |
@@ -71,7 +71,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `BAZARR_IMAGEVERSION` | `amd64-v0.6.6.3-ls7` | Image version of Bazarr container  |
+| `BAZARR_IMAGEVERSION` | `amd64-v0.6.9.1-ls15` | Image version of Bazarr container  |
 | `BAZARR_PORT` | `6767` | Port to bind Bazarr on the host system |
 | `BAZARR_PUID` | `501` | UID of Bazarr user (should be match with the host one) |
 | `BAZARR_PGID` | `501` | GID of Bazarr user (should be match with the host one) |
@@ -87,7 +87,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `MUXIMUX_IMAGEVERSION` | `139` | Image version of Muximux container  |
+| `MUXIMUX_IMAGEVERSION` | `150` | Image version of Muximux container  |
 | `MUXIMUX_PORT` | `80` | Port to bind Muximux on the host system |
 | `MUXIMUX_PUID` | `501` | UID of Muximux user (should be match with the host one) |
 | `MUXIMUX_PGID` | `501` | GID of Muximux user (should be match with the host one) |
@@ -95,7 +95,7 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
-| `PLEX_IMAGEVERSION` | `1.13.8.5395-10d48da0d` | Image version of Plex container |
+| `PLEX_IMAGEVERSION` | `1.14.1.5488-cc260c476` | Image version of Plex container |
 | `PLEX_CLAIM` | `XXX` | Plex claim code (https://www.plex.tv/claim/) |
 | `PLEX_PUID` | `501` | UID of Plex user (should be match with the host one) |
 | `PLEX_PGID` | `501` | GID of Plex user (should be match with the host one) |
