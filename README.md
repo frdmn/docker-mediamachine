@@ -104,6 +104,14 @@ You can make use of the following environment variables / configurations:
 
 | Environment variable | Default value | Description
 |----------------------|---------------|------------|
+| `TAUTULLI_IMAGEVERSION` | `amd64-latest` | Image version of Muximux container  |
+| `TAUTULLI_PORT` | `8181` | Port to bind Muximux on the host system |
+| `TAUTULLI_PUID` | `501` | UID of Muximux user (should be match with the host one) |
+| `TAUTULLI_PGID` | `501` | GID of Muximux user (should be match with the host one) |
+| `TAUTULLI_TZ` | `Europe/Berlin` | Timezone within container |
+
+| Environment variable | Default value | Description
+|----------------------|---------------|------------|
 | `RADARR_BOT_TELEGRAM_BOTTOKEN` | `123456789:HEkD9NpcxbKVxiulzPfCf9fqQoViMKEWZHl` | Telegram token |
 | `RADARR_BOT_BOT_PASSWORD` | `password` | Bot control password |
 | `RADARR_BOT_BOT_OWNER` | `1234567` | Telegram owner ID |

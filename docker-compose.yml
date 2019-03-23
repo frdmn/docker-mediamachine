@@ -117,6 +117,20 @@ services:
       - ./data/configs/plex/transcoding:/transcode
       - ./data/media:/data
 
+  tautulli:
+    restart: always
+    container_name: tautulli
+    image: linuxserver/tautulli:${TAUTULLI_IMAGEVERSION}
+    ports:
+      - "${TAUTULLI_PORT}:8181"
+    environment:
+      - "PUID=${TAUTULLI_PUID}"
+      - "PGID=${TAUTULLI_PGID}"
+      - "TZ=${TAUTULLI_TZ}"
+    volumes:
+      - ./data/configs/tautulli/config:/config
+      - ./data/configs/plex/config/Library/Application\ Support/Plex\ Media\ Server/Logs:/logs
+
   radarr-bot:
     restart: always
     container_name: radarr-bot
