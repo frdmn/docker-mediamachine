@@ -20,6 +20,8 @@ data/configs/oscarr/*
 !data/configs/oscarr/.gitkeep
 data/configs/muximux/*
 !data/configs/muximux/.gitkeep
+data/configs/tautulli/*
+!data/configs/tautulli/.gitkeep
 data/downloads/*
 !data/downloads/.gitkeep
 data/incomplete-downloads/*
